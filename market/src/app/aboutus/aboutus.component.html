@@ -1,0 +1,33 @@
+<section id="team" class="team">
+  <div class="container">
+
+    <div class="section-title aos-init aos-animate" (click)="toggel()" data-aos="fade-up">
+      <h2>Team</h2>
+      <p>Our Great Team</p>
+    </div>
+
+    <div *ngIf="show" class="row aos-init aos-animate" data-aos="fade-left">
+
+      <div class="col-lg-3 col-md-6" *ngFor="let item of data">
+        <div class="member aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+          <div class="pic"><img style="height:271px !important; width:100% !important;" src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+          <div class="member-info">
+            <h4>{{item.name}} </h4>
+            <span>{{item.jopTitle}}</span>
+            <div class="social">
+              <a target="_blank" href="{{item. twitter}}"><i class="bi bi-twitter"></i></a>
+              <a target="_blank" *ngIf="item.fb" href="{{item.fb}}"><i class="bi bi-facebook"></i></a>
+              <a target="_blank" href="{{item.insta}}"><i class="bi bi-instagram"></i></a>
+              <a target="_blank" href="{{item.linkedin}} "><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+</section>
+

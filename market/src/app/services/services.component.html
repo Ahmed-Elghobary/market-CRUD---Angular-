@@ -1,0 +1,25 @@
+<section id="about" class="about">
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch aos-init aos-animate" data-aos="fade-right">
+        <a href="https://www.youtube.com/watch?v=StpBR2W8G5A" class="glightbox play-btn mb-4"></a>
+      </div>
+
+      <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5 aos-init aos-animate" data-aos="fade-left">
+        <h3>الخدمات</h3>
+        <p>نقدم لكم الخدمات علي اعلي المستويات </p>
+
+        <div class="icon-box aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100" *ngFor="let item of data" >
+          <div class="icon"><i class="{{item.cssClass}}"></i></div>
+          <h4 class="title">{{item.title}}</h4>
+          <p class="description">{{item.description}}</p>
+        </div>
+
+
+
+      </div>
+    </div>
+
+  </div>
+</section>

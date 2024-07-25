@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col text-center">
+
+      <div class="gallery-item aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+        <a href="{{product.photo}}" class="gallery-lightbox">
+          <img src="{{product.photo}}" alt="" class="img-fluid">
+        </a>
+      </div>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+
+
+    <section id="gallery" class="gallery">
+      <div class="container">
+
+        <div class="section-title aos-init aos-animate" data-aos="fade-up">
+          <h2>Gallery</h2>
+          <p>صور المنتج</p>
+        </div>
+
+        <div class="row g-0 aos-init aos-animate" data-aos="fade-left">
+
+          <div class="col-lg-3 col-md-4" *ngFor="let item of product.productImages ">
+            <div class="gallery-item aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+              <a href="{{item.images}}" class="gallery-lightbox">
+                <img src="{{item.images}}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+    </section>
+  </div>
+  <div class="col-6" >
+
+    <section id="pricing" class="pricing">
+      <div class="box featured aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
+        <h3>تفاصيل المنتج</h3>
+        <h4><sup>$</sup>{{product.price}}<span> / month</span></h4>
+        <ul>
+          <li>{{product.name}}</li>
+          <li>{{product.description}}</li>
+          <li>{{product.qty}} الكيه المتاحه</li>
+          <li>P{{product.name}}</li>
+          <!--<li class="na">{{product.name}}</li>-->
+        </ul>
+        <div class="btn-wrap">
+          <a href="#" class="btn-buy">اضافه الي السله</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+

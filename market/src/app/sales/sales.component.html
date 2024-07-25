@@ -1,0 +1,51 @@
+<section id="features" class="features">
+  <div class="container" dir="rtl">
+
+    <div class="section-title aos-init aos-animate" data-aos="fade-up">
+      <h2>Features</h2>
+      <p>اقسام المنتجات </p>
+    </div>
+
+    <div class="row aos-init aos-animate" data-aos="fade-left">
+      <div class="col-lg-3 col-md-4 mb-5" *ngFor="let item of cats" (click)="getProducts(item.id)">
+        <div class="icon-box aos-init aos-animate" data-aos="zoom-in" data-aos-delay="50">
+          <i class="{{item.icon}}" style="color: #ffbb2c;"></i>
+          <h3> {{item.name}}</h3>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <section id="gallery" class="gallery">
+      <div class="container">
+
+        <div class="section-title aos-init aos-animate" data-aos="fade-up">
+          <h2>Gallery</h2>
+          <p>Check our Gallery</p>
+        </div>
+
+        <div class="row g-0 aos-init aos-animate" data-aos="fade-left">
+
+          <div class="col-lg-3 col-md-4" *ngFor="let item of products">
+            <div class="gallery-item aos-init aos-animate m-1" data-aos="zoom-in" data-aos-delay="100">
+              <a [routerLink]="['/productList',item.id]" class="gallery-lightbox">
+                <img src="{{item.photo}}" style=" height: 200px;" alt="" class="img-fluid">
+              </a>
+              <h3 style="text-align:center;" class="mt-3">{{item.name}}</h3>
+              <h3 style="text-align:center;" class=""> {{item.price}}LE </h3>
+
+              <button class="btn btn-success">اضافه الي السله</button>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+    </section>
+  </div>
+</section>
